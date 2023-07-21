@@ -1,16 +1,14 @@
+import React from 'react';
+import { GlobalStyle, StyledBackground, StyledDiv } from './App.styled';
+
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <GlobalStyle />
+      <StyledBackground>
+        <StyledDiv>React homework template</StyledDiv>
+      </StyledBackground>
+    </>
   );
 };
