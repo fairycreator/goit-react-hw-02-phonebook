@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const List = styled.ul`
   display: flex;
@@ -24,6 +24,30 @@ export const Item = styled.li`
   font-size: 20px;
 `;
 
+const moveButton = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+const hoverButton = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
 export const DeleteButton = styled.button`
   display: block;
   margin: 0 auto;
@@ -35,5 +59,22 @@ export const DeleteButton = styled.button`
   outline: none;
   border: 1px solid rgba(0, 0, 0, 1);
   box-shadow: 3px 3px 1px 1px #95a4ff, 3px 3px 1px 2px rgba(0, 0, 0, 1);
+
+    &:hover {
+    animation: ${hoverButton} 0.5s ease-in-out;
+    background: #fae820;
+    box-shadow: 3px 3px 1px 1px #1e3efc, 3px 3px 1px 2px rgba(0, 0, 0, 1);
+  }
+    &:focus {
+    animation: ${hoverButton} 0.5s ease-in-out;
+    background: #fae820;
+    box-shadow: 3px 3px 1px 1px #1e3efc, 3px 3px 1px 2px rgba(0, 0, 0, 1);
+  }
+
+   &:active {
+    animation: ${moveButton} 0.5s ease-in-out;
+    background: #fa553c;
+    box-shadow: 3px 3px 1px 1px #1e3efc, 3px 3px 1px 2px rgba(0, 0, 0, 1);
+  }
 `;
 

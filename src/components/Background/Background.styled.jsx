@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 const random = (max) => Math.floor(Math.random() * max);
 
 const multipleBoxShadow = (n) => {
-  let value = `${random(2000)}px ${random(2000)}px #FFF`;
+  let value = `${random(1000)}px ${random(1000)}px #FFF`;
   for (let i = 2; i <= n; i++) {
     value += `, ${random(2000)}px ${random(2000)}px #FFF`;
   }
@@ -19,15 +19,15 @@ const animStar = keyframes`
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(-1000px);
   }
 `;
 
 export const BackgroundContainer = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  overflow: auto;
+  overflow: scroll;
 `;
 
 export const Stars = styled.div`
@@ -40,7 +40,7 @@ export const Stars = styled.div`
   &:after {
     content: ' ';
     position: absolute;
-    top: 2000px;
+    top: 1000px;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -58,7 +58,7 @@ export const Stars2 = styled.div`
   &:after {
     content: ' ';
     position: absolute;
-    top: 2000px;
+    top: 1000px;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -76,7 +76,7 @@ export const Stars3 = styled.div`
   &:after {
     content: ' ';
     position: absolute;
-    top: 2000px;
+    top: 1000px;
     width: 3px;
     height: 3px;
     background: transparent;
