@@ -24,7 +24,7 @@ const animStar = keyframes`
 `;
 
 export const BackgroundContainer = styled.div`
-  height: 100vh;
+  max-height: 100vh;
   width: 100vw;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   overflow: scroll;
